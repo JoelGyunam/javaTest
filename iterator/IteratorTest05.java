@@ -129,8 +129,41 @@ public class IteratorTest05 {
 		rockscissorspaper.add(2,"보");
 			
 		
-		for(int i = playTime; playTime <3;) {
-			
+//		for(int i = playTime; playTime <3;) { //int i 는 사용되고 있지 않다. 따라서, 초기화, 조건, 증감 연산이 명확하게 떨어지지 않는 반복문은 while 로 반복하는 것이 더욱 명확하다.
+//			
+//			System.out.print("\n1은 가위, 2는 바위, 3은 보. 1~3중에 입력하세요 : ");
+//			userCard = scan.nextInt();
+//			randNum = rand.nextInt(3)+1;
+//			
+//			if(userCard == 1 && randNum == 3) {
+//				System.out.println("이겼습니다 (당신 : " + rockscissorspaper.get(userCard-1) + " / 컴퓨터 : " + rockscissorspaper.get(randNum-1) + ")");
+//				userWin ++;
+//			} else if(userCard == 3 && randNum ==1) {
+//				System.out.println("졌습니다  (당신 : " + rockscissorspaper.get(userCard-1) + " / 컴퓨터 : " + rockscissorspaper.get(randNum-1) + ")");
+//				comWin ++;
+//			} else if(userCard < randNum) {
+//				System.out.println("졌습니다 (당신 : " + rockscissorspaper.get(userCard-1) + " / 컴퓨터 : " + rockscissorspaper.get(randNum-1) + ")");
+//				comWin ++;
+//			} else if(userCard > randNum) {
+//				System.out.println("이겼습니다 (당신 : " + rockscissorspaper.get(userCard-1) + " / 컴퓨터 : " + rockscissorspaper.get(randNum-1) + ")");
+//				userWin ++;
+//			} else if(userCard == randNum) {
+//				System.out.println("무승부 입니다 (당신 : " + rockscissorspaper.get(userCard-1) + " / 컴퓨터 : " + rockscissorspaper.get(randNum-1) + ")");
+//			}
+//			
+//			if(userWin >= comWin) {
+//				playTime = userWin;
+//				result1 = "승리";
+//			} else if(userWin <= comWin) {
+//				playTime = comWin;
+//				result1 = "패배";
+//			};
+//		}
+//		
+//		System.out.println("\n 1. 최종 결과 " + userWin + " : " + comWin + "로 당신의 " + result1 + "입니다.");
+
+		
+		while (playTime < 3) {
 			System.out.print("\n1은 가위, 2는 바위, 3은 보. 1~3중에 입력하세요 : ");
 			userCard = scan.nextInt();
 			randNum = rand.nextInt(3)+1;
@@ -159,7 +192,8 @@ public class IteratorTest05 {
 				result1 = "패배";
 			};
 		}
-		System.out.println("\n 최종 결과 " + userWin + " : " + comWin + "로 당신의 " + result1 + "입니다.");
+		
+		System.out.println("\n 2. 최종 결과 " + userWin + " : " + comWin + "로 당신의 " + result1 + "입니다.");
 	}
 
 }
